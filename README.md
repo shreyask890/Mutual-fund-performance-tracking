@@ -34,20 +34,6 @@ Tailored fund selection based on three distinct investor profiles:
 * ⚖️ **Moderate:** Balanced risk-reward ratio.
 * 🚀 **Aggressive:** High-growth potential with higher volatility.
 
----
-
-## 🧠 Recommendation Logic
-
-### Risk-Adjusted Scoring Model
-Each fund is scored using the Z-Score formula to ensure higher returns with lower relative risk:
-
-$$Z = \frac{R_f - R_t}{\sigma_f}$$
-
-*Where:*
-* $R_f$ = Fund Return
-* $R_t$ = Target Return
-* $\sigma_f$ = Fund Risk (Standard Deviation)
-
 ### 👤 Investor Profiles
 | Profile | Target Return | Risk Level |
 | :--- | :--- | :--- |
@@ -113,14 +99,5 @@ As a Notebook:
 
 Bash
 jupyter notebook mf.ipynb
-📌 Future Enhancements
-[ ] Live Streaming: Real-time NAV streaming via API.
-
-[ ] Dashboard: Interactive Web UI using Streamlit.
-
-[ ] ML Integration: Predictive performance modeling using Reinforcement Learning.
-
-[ ] Cloud: Deployment via AWS/GCP Microservices.
-
 🧑‍💻 Author
 Shreyas Kadam Data Science | Financial Analytics | AI Systems
