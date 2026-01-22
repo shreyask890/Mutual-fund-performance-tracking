@@ -1,51 +1,126 @@
-# 📊 Mutual Fund Analysis & Recommendation Tool  
-**Python • Statistics • Financial Data Science**
+# 📊 Mutual Fund Analysis & Recommendation Tool
+### Python • Statistics • Financial Data Science
 
 An end-to-end automated system for large-scale mutual fund data analysis and intelligent fund recommendation using statistical models and risk-adjusted performance metrics.
 
-This project builds a **data pipeline, ranking engine, and recommendation system** for identifying top-performing mutual funds based on investor risk profiles.
-
 ---
+
+## 📖 Overview
+This project builds a robust data pipeline, ranking engine, and recommendation system designed to identify top-performing mutual funds. By leveraging statistical modeling, the tool categorizes funds based on investor risk profiles, ensuring data-driven investment decisions.
+
+
 
 ## 🚀 Key Features
 
 ### 🔄 Automated Data Pipeline
-- Fetches real-time data for **30,000+ mutual funds**
-- Uses public APIs to build a clean, structured dataset
-- Handles missing values, data normalization, and filtering
+* **Scale:** Fetches real-time data for **30,000+** mutual funds.
+* **Integrity:** Uses public APIs to build a clean, structured dataset.
+* **Preprocessing:** Handles missing values, data normalization, and filtering automatically.
 
 ### 📈 Performance Analytics Engine
-- Daily NAV return calculations  
-- Risk & volatility modeling using **Standard Deviation**  
-- Annualized return and risk conversion  
-- Outlier detection and filtering  
-- Efficient frontier style risk-return analysis  
+* **Returns:** Daily NAV return calculations and annualized return conversion.
+* **Risk:** Volatility modeling using Standard Deviation and outlier detection.
+* **Analysis:** Efficient frontier-style risk-return analysis.
 
 ### 🧮 Statistical Ranking System
-Fund ranking using:
-- Z-Scores  
-- Standard Deviation  
-- Risk-adjusted returns  
-- Probability modeling using **Normal Distribution (CDF)**  
+Funds are ranked using a combination of:
+* **Z-Scores** for performance benchmarking.
+* **Standard Deviation** for volatility assessment.
+* **Probability Modeling** using Normal Distribution (CDF) to estimate target achievement.
 
 ### 🤖 Intelligent Recommendation Engine
-Investor-profile based recommendations:
-- 🛡️ Conservative  
-- ⚖️ Moderate  
-- 🚀 Aggressive  
-
-Features:
-- Probability-based success scoring  
-- Risk-filtered fund selection  
-- Growth-fund focused filtering  
+Tailored fund selection based on three distinct investor profiles:
+* 🛡️ **Conservative:** Focus on low-risk, steady growth.
+* ⚖️ **Moderate:** Balanced risk-reward ratio.
+* 🚀 **Aggressive:** High-growth potential with higher volatility.
 
 ---
 
 ## 🧠 Recommendation Logic
 
 ### Risk-Adjusted Scoring Model
+Each fund is scored using the Z-Score formula to ensure higher returns with lower relative risk:
 
-Each fund is scored using:
+$$Z = \frac{R_f - R_t}{\sigma_f}$$
 
+*Where:*
+* $R_f$ = Fund Return
+* $R_t$ = Target Return
+* $\sigma_f$ = Fund Risk (Standard Deviation)
+
+### 👤 Investor Profiles
+| Profile | Target Return | Risk Level |
+| :--- | :--- | :--- |
+| 🛡️ **Conservative** | 8% | Low Risk |
+| ⚖️ **Moderate** | 12–15% | Medium Risk |
+| 🚀 **Aggressive** | 15–20%+ | High Risk |
+
+---
+
+## 🛠️ Tech Stack
+* **Language:** Python
+* **Data Handling:** Pandas, NumPy
+* **Statistics:** SciPy
+* **Visualization:** Matplotlib, Seaborn
+* **Environment:** Jupyter Notebook
+* **Data Source:** API Integration (Requests)
+
+---
+
+## 📁 Project Structure
 ```text
-Z-Score = (Fund Return − Target Return) / Fund Risk
+Mutual-fund-performance-tracking/
+│
+├── mf.py                 # Main execution script
+├── mf.ipynb              # Interactive analysis notebook
+├── data/                 # Local data storage (Git ignored)
+├── .gitignore            # Files to exclude from Git
+├── requirements.txt      # Project dependencies
+└── README.md             # Project documentation
+📊 Data Pipeline Flow
+API Fetch: Retrieve raw NAV data.
+
+Data Cleaning: Handle nulls and normalize formats.
+
+NAV Processing: Calculate daily returns.
+
+Risk Modeling: Compute annualized risk and volatility.
+
+Statistical Ranking: Apply Z-Score and Probability modeling.
+
+Filtering: Apply Investor Profile logic.
+
+Recommendation: Generate final fund list.
+
+⚙️ Setup & Installation
+1. Clone Repository
+Bash
+git clone [https://github.com/shreyask890/Mutual-fund-performance-tracking.git](https://github.com/shreyask890/Mutual-fund-performance-tracking.git)
+cd Mutual-fund-performance-tracking
+2. Create Virtual Environment
+Bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. Install Dependencies
+Bash
+pip install -r requirements.txt
+4. Run the Project
+As a Script:
+
+Bash
+python mf.py
+As a Notebook:
+
+Bash
+jupyter notebook mf.ipynb
+📌 Future Enhancements
+[ ] Live Streaming: Real-time NAV streaming via API.
+
+[ ] Dashboard: Interactive Web UI using Streamlit.
+
+[ ] ML Integration: Predictive performance modeling using Reinforcement Learning.
+
+[ ] Cloud: Deployment via AWS/GCP Microservices.
+
+🧑‍💻 Author
+Shreyas Kadam Data Science | Financial Analytics | AI Systems
