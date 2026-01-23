@@ -100,4 +100,7 @@ As a Notebook:
 Bash
 jupyter notebook mf.ipynb
 🧑‍💻 Author
-Shreyas Kadam Data Science | Financial Analytics | AI Systems
+
+Shreyas Kadam
+Data Science | Financial Analytics | AI Systems
+GitHub: https://github.com/shreyask890
